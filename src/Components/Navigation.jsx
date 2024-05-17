@@ -4,17 +4,27 @@ import { Link } from "react-router-dom";
 
 export const Navigation = () => {
     return (
-        <nav className="flex justify-between items-center h-24 bg-slate-500 text-white px-5 py-5 ">
-            <h3 className="font-bold">GitHub Search</h3>
+        <nav className="flex justify-center items-center overflow-x-auto h-24 bg-black text-white px-10 py-5 ">
+            <div className="flex justify-start w-6/12">
+                <h3 className="font-bold text-xl">GitHub Search</h3>
+            </div>
 
-            <span>
-                <Link to="/" className="uppercase px-2">
-                    Home
-                </Link>
-                <Link to="favorite" className="uppercase">
-                    Favorites
-                </Link>
-            </span>
+            <div className="flex justify-end w-6/12">
+                <span>
+                    <Link
+                        to="/"
+                        className="font-semibold px-2 hover:underline transition-all"
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        to="favorite"
+                        className="font-semibold hover:underline transition-all"
+                    >
+                        Favorites
+                    </Link>
+                </span>
+            </div>
         </nav>
     );
 };
