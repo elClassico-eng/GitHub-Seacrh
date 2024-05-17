@@ -11,7 +11,7 @@ export const ReposCard = ({ repo }) => {
     };
 
     return (
-        <div className="border rounded px-5 py-2 mx-2 mb-3 hover:shadow-xl hover:bg-gray-300 transition-all">
+        <div className="border rounded px-5 py-2 mx-2 mb-3 hover:shadow-xl hover:bg-black transition-all text-white">
             <a href={repo.html_url} target="_black" className="cursor-pointer">
                 <h1 className="font-normal text-lg">
                     Repositories:{" "}

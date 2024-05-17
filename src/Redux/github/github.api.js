@@ -21,7 +21,7 @@ export const gitHubApi = createApi({
             query: (username) => ({
                 url: `users/${username}/repos`,
                 params: {
-                    per_page: 10,
+                    per_page: 5,
                 },
             }),
         }),
