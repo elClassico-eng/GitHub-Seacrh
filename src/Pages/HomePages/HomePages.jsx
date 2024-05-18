@@ -39,16 +39,16 @@ export const HomePages = () => {
     };
 
     return (
-        <div>
+        <>
             <HomeBanner />
-            <div className="flex ">
+            <div className="flex justify-center mt-4 w-full h-full">
                 <MainBanner />
-                <div className="h-screen w-full flex justify-center mx-auto pt-14 bg-blueBG px-5">
+                <div className="h-screen w-full flex justify-center mx-auto pt-14 bg-gradient-to-r from-fuchsia-500 to-violet-500 px-5">
                     {isError && (
                         <h3 className="text-red-600 font-bold text-xl text-center"></h3>
                     )}
-                    <div className="flex justify-center w-auto h-screen mr-3">
-                        <div className="relative w-[620px]">
+                    <div className="flex justify-center items-center w-auto h-screen mr-3">
+                        <div className="relative mb-20 w-[620px]">
                             <input
                                 type="text"
                                 className="border py-2 px-4 w-full h-[42px] mb-2 rounded-xl"
@@ -92,6 +92,6 @@ export const HomePages = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };

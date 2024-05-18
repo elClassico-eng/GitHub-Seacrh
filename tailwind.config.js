@@ -19,6 +19,7 @@ module.exports = {
             blue: colors.blue,
             violet: colors.violet,
             fuchsia: colors.fuchsia,
+            slate: colors.slate,
             blueBG: "#0d1117",
         },
     },

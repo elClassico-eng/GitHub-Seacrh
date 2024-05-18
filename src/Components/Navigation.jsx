@@ -2,29 +2,34 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import { fadeInRight } from "react-animations";
+import styled, { keyframes } from "styled-components";
+
+const FadeInRight = styled.div`
+    animation: 3s ${keyframes`${fadeInRight}`};
+`;
+
 export const Navigation = () => {
     return (
-        <nav className="flex justify-center items-center overflow-x-auto h-24 bg-black text-white px-10 py-5 ">
-            <div className="flex justify-start w-6/12">
-                <h3 className="font-normal text-4xl">GitHub Search</h3>
-            </div>
-
-            <div className="flex justify-end w-6/12">
-                <span>
-                    <Link
-                        to="/"
-                        className="font-semibold px-2 hover:underline transition-all"
-                    >
-                        Home
-                    </Link>
-                    <Link
-                        to="favorite"
-                        className="font-semibold hover:underline transition-all"
-                    >
-                        Favorites
-                    </Link>
-                </span>
-            </div>
+        <nav className="flex absolute  top-1/2 right-0 bg-transporent  text-white px-10 py-5 z-20">
+            <FadeInRight>
+                <div className="w-full">
+                    <div className="flex flex-col justify-center items-center gap-4">
+                        <Link
+                            to="/"
+                            className="font-semibold text-xl px-2 hover:underline transition-all"
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            to="favorite"
+                            className="font-semibold text-xl hover:underline transition-all"
+                        >
+                            Favorites
+                        </Link>
+                    </div>
+                </div>
+            </FadeInRight>
         </nav>
     );
 };
