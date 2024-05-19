@@ -1,24 +1,15 @@
 import React from "react";
 
-import { bounce } from "react-animations";
-import styled, { keyframes } from "styled-components";
-
-const Bounce = styled.div`
-    animation: 2s ${keyframes`${bounce}`};
-`;
-
 export const MainBanner = () => {
     return (
-        <div className="flex justify-center items-center border-x w-screen h-screen bg-gradient-to-r from-violet-500 to-fuchsia-500">
-            <div className="flex flex-col justify-center items-center gap-2 z-10">
-                <Bounce>
-                    <h1 className="text-6xl ">GitHub Search</h1>
-                </Bounce>
-
-                <p className="font-normal">
-                    Try to find the person you are interested in and check out
-                    their repositories!
-                </p>
+        <div className="flex justify-center items-center relative h-screen  w-full overflow-hidden  bg-blueBG">
+            <div className="text-white">
+                <h2 className="font-normal text-5xl text-center">
+                    Add your favorite repositories to <br /> your page!
+                </h2>
+            </div>
+            <div className="absolute text-[270px] uppercase text-stone-700 top-1/2 left-0 animate-move">
+                <h1>GitHub&nbsp;Search</h1>
             </div>
         </div>
     );
