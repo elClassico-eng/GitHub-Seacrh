@@ -43,11 +43,11 @@ export const HomePages = () => {
             <HomeBanner />
             <MainBanner />
             <div className="flex w-full h-full bg-blueBG">
-                <div className="h-screen w-full flex pt-14 px-5 ">
+                <div className="h-screen w-full flex flex-col md:flex-row pt-14 px-5">
                     {isError && (
                         <h3 className="text-red-600 font-bold text-xl text-center"></h3>
                     )}
-                    <div className="flex flex-col items-center w-full h-screen">
+                    <div className="flex flex-col items-center w-full h-full md:h-screen">
                         <div className="relative mb-20 w-full max-w-[620px]">
                             <input
                                 type="text"
@@ -57,7 +57,7 @@ export const HomePages = () => {
                                 onChange={(e) => setSearch(e.target.value)}
                             />
                             {dropDown && (
-                                <ul className="list-none absolute top-[42px] overflow-y-scroll left-0 right-0 max-h-[200px] shadow-md bg-white">
+                                <ul className="list-none absolute top-[42px] overflow-y-scroll left-0 right-0 max-h-[300px] shadow-md bg-white">
                                     {isLoading && (
                                         <p className="text-center text-gray-400">
                                             Loading users...
@@ -67,11 +67,18 @@ export const HomePages = () => {
                                         return (
                                             <li
                                                 key={user.id}
-                                                className="px-2 py-4 hover:bg-gray-500 hover:text-white transition-colors cursor-pointer"
+                                                className="relative bg-cardBG text-white px-2 py-4 hover:bg-blueBG hover:text-white transition-colors cursor-pointer"
                                                 onClick={() =>
                                                     clickHandler(user.login)
                                                 }
                                             >
+                                                <div className="flex items-center h-[50px] w-[50px] rounded ">
+                                                    <img
+                                                        src={user.avatar_url}
+                                                        alt="Avatar"
+                                                        classname="absolute top-0 left-0 w-full h-full z-0 object-cover"
+                                                    />
+                                                </div>
                                                 {user.login}
                                             </li>
                                         );
@@ -79,7 +86,7 @@ export const HomePages = () => {
                                 </ul>
                             )}
                         </div>
-                        <div className="flex gap-6">
+                        <div className="flex flex-col md:flex-row gap-6">
                             {isLoadingRepos && (
                                 <p className="text-center text-gray-400">
                                     Repositories are loading...
