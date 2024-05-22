@@ -3,6 +3,8 @@ import React from "react";
 import { zoomIn } from "react-animations";
 import styled, { keyframes } from "styled-components";
 
+import { Link } from "react-scroll";
+
 const ZoomIn = styled.div`
     animation: 4s ${keyframes`${zoomIn}`};
 `;
@@ -23,9 +25,11 @@ export const HomeBanner = () => {
                     </h1>
                 </ZoomIn>
                 <ZoomIn>
-                    <button className="w-[200px] h-[50px] md:w-[270px] md:h-[65px] bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full text-lg md:text-xl border-black cursor-pointer transition-all">
-                        Try now
-                    </button>
+                    <Link to="section-1" smooth={true} duration={500}>
+                        <button className="w-[200px] h-[50px] md:w-[270px] md:h-[65px] bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full text-lg md:text-xl border-black cursor-pointer transition-all">
+                            Try now
+                        </button>
+                    </Link>
                 </ZoomIn>
             </div>
         </div>
