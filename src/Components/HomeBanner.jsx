@@ -1,13 +1,8 @@
 import React from "react";
 
-import { zoomIn } from "react-animations";
-import styled, { keyframes } from "styled-components";
+import { ReactTyped } from "react-typed";
 
 import { Link } from "react-scroll";
-
-const ZoomIn = styled.div`
-    animation: 4s ${keyframes`${zoomIn}`};
-`;
 
 export const HomeBanner = () => {
     return (
@@ -19,18 +14,18 @@ export const HomeBanner = () => {
                 alt="background image"
             />
             <div className="flex flex-col justify-center items-center gap-y-12 md:gap-y-24 absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 z-20 px-4 text-center">
-                <ZoomIn>
-                    <h1 className="text-3xl md:text-6xl text-white">
-                        Find the same repository from GitHub
-                    </h1>
-                </ZoomIn>
-                <ZoomIn>
-                    <Link to="section-1" smooth={true} duration={500}>
-                        <button className="w-[200px] h-[50px] md:w-[270px] md:h-[65px] bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full text-lg md:text-xl border-black cursor-pointer transition-all">
-                            Try now
-                        </button>
-                    </Link>
-                </ZoomIn>
+                <ReactTyped
+                    className="text-8xl leading-4 md:text-6xl  text-white"
+                    strings={["Find the same repository from GitHub!"]}
+                    typeSpeed={75}
+                    startWhenVisible={true}
+                />
+
+                <Link to="section-1" smooth={true} duration={500}>
+                    <button className="w-[200px] h-[50px] md:w-[270px] md:h-[65px] bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full text-lg md:text-xl border-black cursor-pointer transition-all">
+                        Try now
+                    </button>
+                </Link>
             </div>
         </div>
     );
