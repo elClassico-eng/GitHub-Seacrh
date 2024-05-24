@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "./UI/Button";
+import { Button } from "../Button/Button";
 
 export const FavCard = ({ fav }) => {
     return (

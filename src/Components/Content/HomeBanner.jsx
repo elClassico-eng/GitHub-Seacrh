@@ -1,7 +1,5 @@
 import React from "react";
-
 import { ReactTyped } from "react-typed";
-
 import { Link } from "react-scroll";
 
 export const HomeBanner = () => {
@@ -15,14 +13,14 @@ export const HomeBanner = () => {
             />
             <div className="flex flex-col justify-center items-center gap-y-12 md:gap-y-24 absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 z-20 px-4 text-center">
                 <ReactTyped
-                    className="text-8xl leading-4 md:text-6xl  text-white"
+                    className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white"
                     strings={["Find the same repository from GitHub!"]}
                     typeSpeed={75}
                     startWhenVisible={true}
                 />
 
                 <Link to="section-1" smooth={true} duration={500}>
-                    <button className="w-[200px] h-[50px] md:w-[270px] md:h-[65px] bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full text-lg md:text-xl border-black cursor-pointer transition-all">
+                    <button className="w-[200px] h-[50px] sm:w-[220px] sm:h-[55px] md:w-[240px] md:h-[60px] lg:w-[260px] lg:h-[65px] xl:w-[270px] xl:h-[70px] bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full text-lg sm:text-lg md:text-xl lg:text-2xl border-black cursor-pointer transition-all">
                         Try now
                     </button>
                 </Link>

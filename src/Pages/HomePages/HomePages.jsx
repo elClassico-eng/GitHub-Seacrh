@@ -8,10 +8,10 @@ import {
 } from "../../Redux/github/github.api";
 
 import { useDebounce } from "../../Hooks/useDebounce";
-import { ReposCard } from "../../Components/ReposCard";
+import { ReposCard } from "../../Components/UI/Card/ReposCard";
 
-import { HomeBanner } from "../../Components/HomeBanner";
-import { MainBanner } from "../../Components/MainBanner";
+import { HomeBanner } from "../../Components/Content/HomeBanner";
+import { MainBanner } from "../../Components/Content/MainBanner";
 
 export const HomePages = () => {
     const [search, setSearch] = useState("");

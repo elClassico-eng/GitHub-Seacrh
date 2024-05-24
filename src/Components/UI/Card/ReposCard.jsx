@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import { useActions } from "../Hooks/actions";
-import { Button } from "./UI/Button";
-import { ButtonRemove } from "./UI/ButtonRemove";
-import { useAppSelector } from "../Hooks/redux";
+import { useActions } from "../../../Hooks/actions";
+import { Button } from "../Button/Button";
+import { ButtonRemove } from "../Button/ButtonRemove";
+import { useAppSelector } from "../../../Hooks/redux";
 
 export const ReposCard = ({ repo }) => {
     const { favorites } = useAppSelector((state) => state.gitHub);
