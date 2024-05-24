@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GitHub-Seacrh/static/css/main.8a572f6c.css",
+    "main.js": "/GitHub-Seacrh/static/js/main.256aaf39.js",
+    "index.html": "/GitHub-Seacrh/index.html",
+    "main.8a572f6c.css.map": "/GitHub-Seacrh/static/css/main.8a572f6c.css.map",
+    "main.256aaf39.js.map": "/GitHub-Seacrh/static/js/main.256aaf39.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a572f6c.css",
+    "static/js/main.256aaf39.js"
+  ]
+}
